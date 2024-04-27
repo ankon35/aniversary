@@ -4,6 +4,7 @@ body{
     justify-content: center;
     height: 100vh;
     background: #b784db;
+    /* max-width: 1280px; */
 }
 
 .envelop{
@@ -17,6 +18,11 @@ body{
     height: 200px;
     background: #6247aa;
 }
+
+
+
+
+
 
 .front{
     position: absolute;
@@ -70,4 +76,107 @@ body{
 
 .envelop:hover .top{
     transform: rotateX(180deg);
+}
+
+.letter{
+    position: absolute;
+    background: white;
+    width: 230px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+    transition: 0.2s;
+}
+
+.envelop:hover .letter{
+    transform: translateY(-100px);
+    z-index: 2;
+}
+
+.text1{
+    position: absolute;
+    color: black;
+    top: -50%;
+}
+
+
+
+
+.text{
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: -30px;
+    left: 15px;
+}
+
+
+.heart{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    transform: rotate(-45deg);
+    box-shadow: -5px 10px 90px red;
+    animation: untoldcoding 0.6s linear infinite;
+}
+
+@keyframes untoldcoding{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+
+    75%{
+        transform: rotate(-45deg) scale(1.);
+    }
+
+    100%{
+        transform: rotate(-45deg) scale(0.9);
+    }
+
+}
+
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    top: -40px;
+    border-radius: 50px;
+
+}
+
+
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    right: -40px;
+    background-color: red;
+    border-radius: 50px;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    color: black;
+    padding-top: 20px;
+    align-items: end;
+    justify-content: end;
+    display: flex;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
 }
